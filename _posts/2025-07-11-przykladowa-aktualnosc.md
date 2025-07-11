@@ -3,6 +3,9 @@ layout: post
 title: "Nowy samochód w ofercie"
 image: /assets/aktualnosci/news1.jpg
 excerpt: "W naszej ofercie pojawił się nowy, ekologiczny samochód. Przeczytaj więcej!"
+gallery:
+  - /assets/aktualnosci/news2.jpg
+  - /assets/aktualnosci/news3.jpg
 ---
 
 W naszej ofercie pojawił się nowy, ekologiczny samochód marki ExampleCar.  
