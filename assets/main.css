@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  min-height: 100vh;
   font-family: 'Roboto', Arial, sans-serif;
-  background-image: url('/assets/zsbn.jpg');
+  /* Tło statyczne, wypełniające cały ekran */
+  background-image: url('/assets/background.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Kontener na stronę - białe tło, wyśrodkowany, szerokość 1400px */
+.site-container {
+  background: #fff;
+  width: 1400px;
+  max-width: 95vw;
+  margin: 40px auto 40px auto;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  border-radius: 18px;
+  padding: 32px 40px;
+  z-index: 1;
+  position: relative;
 }
 
 nav ul {
@@ -13,9 +39,12 @@ nav ul {
   gap: 20px;
   list-style: none;
   padding: 0;
+  margin-bottom: 30px;
+  justify-content: center;
 }
 nav ul li a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.05rem;
 }
