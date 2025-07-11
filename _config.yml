@@ -1,6 +1,6 @@
 title: Przykładowa Firma Sp. z o.o.
 description: Strona firmowa z aktualnościami
-baseurl: ""
+baseurl: "" # jeśli jest na github.io, zostaw puste
 url: "https://mknet73.github.io"
 
 nav:
@@ -8,18 +8,13 @@ nav:
     url: /
   - title: "O nas"
     url: /about/
-  - title: "Kontakt"
-    url: /contact/
   - title: "Aktualności"
     url: /aktualnosci/
+  - title: "Kontakt"
+    url: /contact/
 
 markdown: kramdown
-permalink: /:collection/:title/
-collections:
-  aktualnosci:
-    output: true
-    permalink: /aktualnosci/:title/
-
+permalink: /posts/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
