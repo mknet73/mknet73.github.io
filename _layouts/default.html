@@ -5,9 +5,21 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
     <div class="site-container">
+      <div class="site-topbar">
+        <div class="topbar-company">
+          <span class="company-name">Przykładowa Firma Sp. z o.o.</span>
+          <span class="company-contact">tel: 123 456 789 &nbsp; | &nbsp; email: kontakt@przykladowa.pl</span>
+        </div>
+        <div class="topbar-social">
+          <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://youtube.com/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
       <nav>
         <ul>
           {% for item in site.nav %}
