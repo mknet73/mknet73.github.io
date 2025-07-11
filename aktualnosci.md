@@ -7,7 +7,7 @@ permalink: /aktualnosci/
 <h1>Aktualności</h1>
 
 {% for post in site.posts %}
-  <div class="news-item" data-post-id="{{ post.id }}">
+  <div class="news-item" data-post-slug="{{ post.slug }}">
     {% if post.image %}
       <div class="news-thumb">
         <img src="{{ post.image }}" alt="{{ post.title }}">
@@ -18,9 +18,9 @@ permalink: /aktualnosci/
       <div class="news-summary">
         {{ post.excerpt | markdownify }}
       </div>
-      <a href="#" class="news-readmore" data-full="#full-{{ post.id }}">Czytaj więcej</a>
+      <a href="#" class="news-readmore" data-full="#full-{{ post.slug }}">Czytaj więcej</a>
     </div>
-    <div id="full-{{ post.id }}" class="news-full-content" style="display:none;">
+    <div id="full-{{ post.slug }}" class="news-full-content" style="display:none;">
       <h2>{{ post.title }}</h2>
       {% if post.image %}
         <img src="{{ post.image }}" alt="{{ post.title }}" class="news-single-img">
@@ -40,4 +40,3 @@ permalink: /aktualnosci/
   </div>
 </div>
 <script src="/assets/modal-news.js"></script>
-
