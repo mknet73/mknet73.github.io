@@ -12,16 +12,7 @@ permalink: /aktualnosci/
     <div class="news-summary">
       {{ post.excerpt | markdownify }}
     </div>
-    <a href="#" class="news-readmore" data-full="#full-{{ post.id }}">Czytaj więcej</a>
-    <div id="full-{{ post.id }}" class="news-full-content" style="display:none;">
-      <h2>{{ post.title }}</h2>
-      {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}" class="news-single-img">
-      {% endif %}
-      <div class="news-single-content">
-        {{ post.content }}
-      </div>
-    </div>
+    <a href="#" class="news-readmore" data-url="{{ post.url }}">Czytaj więcej</a>
   </div>
 {% endfor %}
 
