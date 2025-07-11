@@ -5,6 +5,8 @@ theme: jekyll-theme-minimal
 nav:
   - title: "Strona główna"
     url: /
+  - title: "Aktualności"
+    url: /aktualnosci/
   - title: "O mnie"
     url: /about/
   - title: "Kontakt"
