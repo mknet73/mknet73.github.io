@@ -28,6 +28,13 @@ permalink: /aktualnosci/
       <div class="news-single-content">
         {{ post.content }}
       </div>
+      {% if post.gallery %}
+        <div class="news-gallery">
+          {% for img in post.gallery %}
+            <img src="{{ img }}" alt="Galeria: {{ post.title }}" class="news-gallery-img">
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endfor %}
