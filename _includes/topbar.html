@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head>
+<body>
+  <div class="site-container">
+    {% include topbar.html %}
+    {% include menu.html %}
+    <main>
+      <div class="news-single">
+        <h1>{{ page.title }}</h1>
+        {% if page.image %}
+          <img src="{{ page.image }}" alt="{{ page.title }}" class="news-single-img">
+        {% endif %}
+        <div class="news-single-content">
+          {{ content }}
+        </div>
+        <a href="{{ '/aktualnosci/' | relative_url }}" class="news-back-btn">&larr; Powrót do aktualności</a>
+      </div>
+    </main>
+  </div>
+  {% include footer.html %}
+</body>
+</html>
