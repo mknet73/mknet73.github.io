@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   </head>
   <body>
-    <nav>
-      <ul>
-        {% for item in site.nav %}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <main>
-      {{ content }}
-    </main>
+    <div class="site-container">
+      <nav>
+        <ul>
+          {% for item in site.nav %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <main>
+        {{ content }}
+      </main>
+    </div>
   </body>
 </html>
