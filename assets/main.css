@@ -246,3 +246,115 @@ nav ul li a {
     margin-bottom: 0;
   }
 }
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0;
+}
+.news-item {
+  display: flex;
+  flex-direction: row;
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+.news-thumb {
+  flex: 0 0 220px;
+  max-width: 220px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+.news-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.news-info {
+  flex: 1;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.news-info h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+  color: #222;
+}
+.news-info p {
+  color: #555;
+  margin-bottom: 16px;
+}
+.news-more-btn {
+  align-self: flex-start;
+  background: #37d67a;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.news-more-btn:hover {
+  background: #21a64c;
+}
+
+/* Pojedynczy news */
+.news-single {
+  max-width: 720px;
+  margin: 0 auto 48px auto;
+  padding: 40px 32px;
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.10);
+  text-align: left;
+}
+.news-single-img {
+  width: 100%;
+  max-width: 510px;
+  display: block;
+  border-radius: 12px;
+  margin: 24px auto 24px auto;
+}
+.news-single-content {
+  font-size: 1.10rem;
+  color: #333;
+  margin-bottom: 32px;
+}
+.news-back-btn {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.news-back-btn:hover {
+  background: #d6d6d6;
+}
+
+/* Responsywność */
+@media (max-width: 800px) {
+  .news-item {
+    flex-direction: column;
+  }
+  .news-thumb {
+    max-width: 100%;
+    width: 100%;
+  }
+  .news-info {
+    padding: 18px 12px;
+  }
+  .news-single {
+    padding: 18px 6px;
+  }
+}
