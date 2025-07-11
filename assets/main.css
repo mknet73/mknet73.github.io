@@ -9,7 +9,7 @@ html, body {
 body {
   min-height: 100vh;
   font-family: 'Roboto', Arial, sans-serif;
-  background-image: url('/assets/zsbn.jpg');
+  background-image: url('/assets/background.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -133,49 +133,29 @@ nav ul li a {
   max-width: 500px;
 }
 
-/* Kontakt: dane + mapka */
-.contact-info-map-flex {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-.contact-info-block {
-  min-width: 220px;
-  font-size: 1.02rem;
-  color: #333;
-  flex: 0 0 230px;
-}
-.contact-map-block {
-  max-width: 430px;
-  width: 100%;
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.map-iframe-wrapper {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-  border: 1px solid #ddd;
-  background: #eee;
-}
-.map-iframe-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* Formularz kontaktowy */
+/* Kontakt: dane i formularz obok siebie */
 .contact-form-container {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
   margin-top: 32px;
+  flex-wrap: wrap;
 }
 
+.contact-info-block {
+  font-size: 1.02rem;
+  color: #333;
+  min-width: 220px;
+  max-width: 260px;
+  padding: 28px 16px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin-bottom: 24px;
+}
+
+/* Formularz kontaktowy */
 .contact-form {
   background: #f8f8f8;
   padding: 32px 28px;
@@ -256,11 +236,13 @@ nav ul li a {
   .topbar-social {
     margin-top: 5px;
   }
-  .contact-info-map-flex {
+  .contact-form-container {
     flex-direction: column;
-    gap: 14px;
+    align-items: stretch;
+    gap: 20px;
   }
-  .contact-map-block {
+  .contact-info-block {
     max-width: 100%;
+    margin-bottom: 0;
   }
 }
