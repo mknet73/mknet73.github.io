@@ -7,16 +7,15 @@ permalink: /aktualnosci/
 ## Aktualności
 
 <div class="news-list">
-  {% for post in site.posts %}
-    <div class="news-item">
-      <div class="news-thumb">
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-      </div>
-      <div class="news-info">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url | relative_url }}" class="news-more-btn">Czytaj więcej</a>
-      </div>
+ {% for post in site.posts %}
+  <div class="news-item" data-post-id="{{ post.id }}">
+    <h2>{{ post.title }}</h2>
+    <div class="news-summary">{{ post.excerpt }}</div>
+    <a href="#" class="news-readmore" data-full="#full-{{ post.id }}">Czytaj więcej</a>
+    <div id="full-{{ post.id }}" class="news-full-content" style="display:none;">
+      <h2>{{ post.title }}</h2>
+      {{ post.content }}
     </div>
-  {% endfor %}
+  </div>
+{% endfor %}
 </div>
