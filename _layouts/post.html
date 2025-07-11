@@ -20,6 +20,13 @@
         <div class="news-single-content">
           {{ content }}
         </div>
+        {% if page.gallery %}
+          <div class="news-gallery">
+            {% for img in page.gallery %}
+              <img src="{{ img }}" alt="Galeria: {{ page.title }}" class="news-gallery-img">
+            {% endfor %}
+          </div>
+        {% endif %}
         <a href="{{ '/aktualnosci/' | relative_url }}" class="news-back-btn">&larr; Powrót do aktualności</a>
       </div>
     </main>
