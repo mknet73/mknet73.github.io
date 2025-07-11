@@ -162,3 +162,29 @@ nav ul li a {
     margin-top: 5px;
   }
 }
+.contact-info-map-flex {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.contact-info-block {
+  min-width: 220px;
+  font-size: 1.02rem;
+  color: #333;
+  flex: 0 0 230px;
+}
+.contact-map-block {
+  flex: 1;
+  min-width: 200px;
+  max-width: 420px;
+}
+@media (max-width: 800px) {
+  .contact-info-map-flex {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .contact-map-block {
+    max-width: 100%;
+  }
+}
