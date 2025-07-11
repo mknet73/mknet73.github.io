@@ -1,3 +1,12 @@
 title: Twoja Nazwa Strony
 description: Opis strony
 theme: jekyll-theme-minimal
+
+nav:
+  - title: "Strona główna"
+    url: /
+  - title: "O mnie"
+    url: /about/
+  - title: "Kontakt"
+    url: /contact/
+    
