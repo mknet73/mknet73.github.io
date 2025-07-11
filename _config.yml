@@ -1,14 +1,25 @@
-title: Twoja Nazwa Strony
-description: Opis strony
-theme: jekyll-theme-minimal
+title: Przykładowa Firma Sp. z o.o.
+description: Strona firmowa z aktualnościami
+baseurl: ""
+url: "https://mknet73.github.io"
 
 nav:
   - title: "Strona główna"
     url: /
-  - title: "Aktualności"
-    url: /aktualnosci/
-  - title: "O mnie"
+  - title: "O nas"
     url: /about/
   - title: "Kontakt"
     url: /contact/
-    
+  - title: "Aktualności"
+    url: /aktualnosci/
+
+markdown: kramdown
+permalink: /:collection/:title/
+collections:
+  aktualnosci:
+    output: true
+    permalink: /aktualnosci/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
