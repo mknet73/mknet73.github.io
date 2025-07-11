@@ -39,11 +39,5 @@ permalink: /aktualnosci/
   </div>
 {% endfor %}
 
-<!-- MODAL NEWS -->
-<div id="news-modal" class="news-modal">
-  <div class="news-modal-content">
-    <span class="news-modal-close">&times;</span>
-    <div id="news-modal-body"></div>
-  </div>
-</div>
+<!-- NIE wstawiaj tutaj sztywnego modala - modal generuje JS! -->
 <script src="/assets/modal-news.js"></script>
