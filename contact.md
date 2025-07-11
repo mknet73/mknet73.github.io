@@ -6,27 +6,14 @@ permalink: /contact/
 
 ## Skontaktuj się z nami
 
-<div class="contact-info-map-flex">
-  <div class="contact-info-block">
+<div class="contact-form-container">
+  <div class="contact-info-block" style="margin-bottom: 0; margin-right: 32px; min-width:220px;">
     <strong>Przykładowa Firma Sp. z o.o.</strong><br>
     ul. Fikcyjna 123<br>
     00-000 Warszawa<br>
     tel: 123 456 789<br>
     email: kontakt@przykladowa.pl<br>
   </div>
-  <div class="contact-map-block">
-    <div class="map-iframe-wrapper">
-      <iframe
-        src="https://www.google.com/maps?q=ul.+Fikcyjna+123,+Warszawa&output=embed"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</div>
-
-<div class="contact-form-container">
   <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
     <label for="name">Imię i nazwisko</label>
     <input type="text" id="name" name="name" required>
