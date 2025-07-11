@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-</head>
-<body>
-  <div class="site-container">
-    {% include topbar.html %}
-    {% include menu.html %}
-    <main>
-      <div class="news-single">
-        <h1>{{ page.title }}</h1>
-        {% if page.image %}
-          <img src="{{ page.image }}" alt="{{ page.title }}" class="news-single-img">
-        {% endif %}
-        <div class="news-single-content">
-          {{ content }}
-        </div>
-        <a href="{{ '/aktualnosci/' | relative_url }}" class="news-back-btn">&larr; Powrót do aktualności</a>
-      </div>
-    </main>
+<div class="site-topbar">
+  <div class="topbar-company">
+    <img src="/assets/logo.png" alt="Logo firmy" class="company-logo">
+    <div class="topbar-company-text">
+      <span class="company-name">Przykładowa Firma Sp. z o.o.</span>
+      <span class="company-contact">ul. Fikcyjna 123, 00-000 Warszawa, tel: 123 456 789</span>
+    </div>
   </div>
-  {% include footer.html %}
-</body>
-</html>
+  <div class="topbar-social">
+    <a href="#" title="Facebook" aria-label="Facebook"><svg width="1em" height="1em" fill="currentColor"><use xlink:href="#icon-facebook"/></svg></a>
+    <a href="#" title="Instagram" aria-label="Instagram"><svg width="1em" height="1em" fill="currentColor"><use xlink:href="#icon-instagram"/></svg></a>
+    <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg width="1em" height="1em" fill="currentColor"><use xlink:href="#icon-linkedin"/></svg></a>
+  </div>
