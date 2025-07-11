@@ -18,7 +18,7 @@ permalink: /aktualnosci/
       <div class="news-summary">
         {{ post.excerpt | markdownify }}
       </div>
-      <a href="#" class="news-readmore" data-full="#full-{{ post.slug }}">Czytaj więcej</a>
+      <a href="#" class="news-readmore news-link" data-full="#full-{{ post.slug }}">Czytaj więcej</a>
     </div>
     <div id="full-{{ post.slug }}" class="news-full-content" style="display:none;">
       <h2>{{ post.title }}</h2>
