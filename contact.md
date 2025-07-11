@@ -13,6 +13,13 @@ permalink: /contact/
     00-000 Warszawa<br>
     tel: 123 456 789<br>
     email: kontakt@przykladowa.pl<br>
+    <hr style="margin:18px 0;">
+    <strong>Jak dojechać?</strong><br>
+    <ul style="margin-left: 1em; padding-left: 0.5em;">
+      <li><b>Samochodem:</b> Wjazd od ul. Fikcyjnej, bezpłatny parking przed budynkiem.</li>
+      <li><b>Komunikacją miejską:</b> Autobusy 123, 456 oraz tramwaj 7 – przystanek "Fikcyjna".</li>
+      <li><b>Rowerem:</b> Stacja rowerów miejskich naprzeciwko wejścia.</li>
+    </ul>
   </div>
   <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
     <label for="name">Imię i nazwisko</label>
