@@ -13,18 +13,16 @@ permalink: /contact/
     00-000 Warszawa<br>
     tel: 123 456 789<br>
     email: kontakt@przykladowa.pl<br>
-    <br>
   </div>
   <div class="contact-map-block">
-    <iframe
-      src="https://www.google.com/maps?q=ul.+Fikcyjna+123,+Warszawa&output=embed"
-      width="100%"
-      height="200"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <div class="map-iframe-wrapper">
+      <iframe
+        src="https://www.google.com/maps?q=ul.+Fikcyjna+123,+Warszawa&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </div>
 </div>
 
