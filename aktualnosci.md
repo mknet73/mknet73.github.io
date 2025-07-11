@@ -4,18 +4,32 @@ title: Aktualności
 permalink: /aktualnosci/
 ---
 
-## Aktualności
+<h1>Aktualności</h1>
 
-<div class="news-list">
- {% for post in site.posts %}
+{% for post in site.posts %}
   <div class="news-item" data-post-id="{{ post.id }}">
     <h2>{{ post.title }}</h2>
-    <div class="news-summary">{{ post.excerpt }}</div>
+    <div class="news-summary">
+      {{ post.excerpt | markdownify }}
+    </div>
     <a href="#" class="news-readmore" data-full="#full-{{ post.id }}">Czytaj więcej</a>
     <div id="full-{{ post.id }}" class="news-full-content" style="display:none;">
       <h2>{{ post.title }}</h2>
-      {{ post.content }}
+      {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="news-single-img">
+      {% endif %}
+      <div class="news-single-content">
+        {{ post.content }}
+      </div>
     </div>
   </div>
 {% endfor %}
+
+<!-- MODAL NEWS -->
+<div id="news-modal" class="news-modal">
+  <div class="news-modal-content">
+    <span class="news-modal-close">&times;</span>
+    <div id="news-modal-body"></div>
+  </div>
 </div>
+<script src="/assets/modal-news.js"></script>
