@@ -1,48 +1,44 @@
-// MODAL NEWS - obsługa otwierania i zamykania newsów w modalu
-document.addEventListener("DOMContentLoaded", function() {
-  // Obsługa linków "Czytaj więcej"
-  document.querySelectorAll(".news-readmore").forEach(function(link) {
-    link.addEventListener("click", function(e) {
+document.addEventListener("DOMContentLoaded", function () {
+  // Obsługa modala tylko dla linków z klasy .news-link, NIE .footer-news-link
+  document.querySelectorAll('a.news-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      // Nie przechwytuj, jeśli link ma również klasę .footer-news-link (na wszelki wypadek)
+      if (link.classList.contains('footer-news-link')) return;
+
       e.preventDefault();
-      var fullId = link.getAttribute("data-full");
-      var fullContent = document.querySelector(fullId);
-      if (!fullContent) return;
-      var modal = document.getElementById("news-modal");
-      var modalBody = document.getElementById("news-modal-body");
-      modalBody.innerHTML = fullContent.innerHTML;
-      modal.style.display = "block";
-      document.body.style.overflow = "hidden";
+      const url = link.getAttribute('href');
+      openNewsModal(url);
     });
   });
 
-  // Zamknięcie modala po kliknięciu X
-  document.querySelector(".news-modal-close").onclick = function() {
-    document.getElementById("news-modal").style.display = "none";
-    document.body.style.overflow = "";
-  };
-
-  // Zamknięcie modala po kliknięciu poza treść modala
-  document.getElementById("news-modal").addEventListener("click", function(e) {
-    if (e.target === this) {
-      this.style.display = "none";
-      document.body.style.overflow = "";
-    }
-  });
-});
-
-// LIGHTBOX dla news-gallery-img
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.addEventListener('click', function(e) {
-    if (e.target.classList.contains('news-gallery-img')) {
-      e.preventDefault();
-      const src = e.target.getAttribute('src');
-      const overlay = document.createElement('div');
-      overlay.className = 'lightbox-overlay';
-      overlay.innerHTML = `<img src="${src}" class="lightbox-image" alt="">`;
-      overlay.addEventListener('click', function() {
-        overlay.remove();
+  function openNewsModal(url) {
+    // Przykład ładowania treści AJAX-em i wyświetlenia w modalu
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        showModal(html);
       });
-      document.body.appendChild(overlay);
+  }
+
+  function showModal(html) {
+    let modal = document.getElementById('news-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'news-modal';
+      modal.style.position = 'fixed';
+      modal.style.top = 0;
+      modal.style.left = 0;
+      modal.style.width = '100vw';
+      modal.style.height = '100vh';
+      modal.style.background = 'rgba(0,0,0,0.5)';
+      modal.style.zIndex = 10000;
+      modal.innerHTML = '<div id="news-modal-content" style="margin:60px auto;max-width:700px;background:#fff;padding:32px;border-radius:10px;position:relative"></div>';
+      document.body.appendChild(modal);
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) modal.remove();
+      });
     }
-  });
+    document.getElementById('news-modal-content').innerHTML = html + '<br><button onclick="document.getElementById(\'news-modal\').remove()">Zamknij</button>';
+    modal.style.display = 'block';
+  }
 });
