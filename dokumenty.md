@@ -14,7 +14,7 @@ permalink: /dokumenty/
     <a href="/assets/documents/certyfikat (6).pdf" download>Pobierz: Regulamin (PDF)</a>
   </li>
   <li>
-    <a href="/assets/documents/cennik.docx" download>Pobierz: Cennik (Word)</a>
+    <a href="/assets/documents/2ti_sk.docx" download>Pobierz: Cennik (Word)</a>
   </li>
   <!-- Dodaj kolejne pozycje według potrzeb -->
 </ul>
