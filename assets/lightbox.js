@@ -1,10 +1,12 @@
-// Lightbox dla zdjęć w newsach (.news-gallery-img)
+// Lightbox dla zdjęć w newsach (.news-gallery-img), także w dynamicznych modalach
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('.news-gallery-img').forEach(function(img) {
-    img.addEventListener('click', function() {
+  // Delegacja zdarzenia na całego document
+  document.body.addEventListener('click', function(e) {
+    const img = e.target.closest('.news-gallery-img');
+    if (img) {
       showLightbox(img.src, img.alt);
-    });
+    }
   });
 
   function showLightbox(src, alt) {
