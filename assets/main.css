@@ -2,7 +2,6 @@
 
 html, body {
   height: 100%;
-body {
   margin: 0;
   padding: 0;
 }
@@ -10,32 +9,18 @@ body {
 body {
   min-height: 100vh;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #e5e5e5;
   background-image: url('/assets/zsbn.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-position: center;
-  color: #222;
-}
-
-.site-container {
-  max-width: 1000px;
-  margin: 30px auto 0 auto;
-  background: rgba(255,255,255,0.96);
-  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 /* Pasek górny z danymi firmy, logo i social media */
-/* Topbar */
 .site-topbar {
   display: flex;
   justify-content: space-between;
@@ -44,9 +29,6 @@ body {
   padding-bottom: 12px;
   border-bottom: 1px solid #e9e9e9;
   margin-bottom: 18px;
-  background: #262f36;
-  color: #fff;
-  padding: 10px 24px;
 }
 
 .topbar-company {
@@ -60,8 +42,6 @@ body {
   width: 70px;
   height: auto;
   display: block;
-  height: 48px;
-  margin-right: 16px;
 }
 
 .topbar-company-text {
@@ -75,30 +55,23 @@ body {
   font-weight: 600;
   color: #444;
   letter-spacing: 0.5px;
-  font-weight: bold;
-  font-size: 1.2em;
 }
 
 .company-contact {
   font-size: 0.93rem;
   color: #777;
-  font-size: 0.95em;
-  color: #bcd;
 }
 
 .topbar-social a {
-  color: #fff;
   margin-left: 18px;
   color: #888;
   font-size: 1.35rem;
-  font-size: 1.4em;
   transition: color 0.2s;
   text-decoration: none;
   vertical-align: middle;
 }
 .topbar-social a:hover {
   color: #37d67a;
-  color: #f90;
 }
 
 /* Kontener na stronę - białe tło, wyśrodkowany, szerokość 1400px */
@@ -113,14 +86,9 @@ body {
   z-index: 1;
   position: relative;
   flex: 1 0 auto;
-/* Menu */
-nav {
-  background: #1c2227;
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 20px;
   list-style: none;
@@ -130,32 +98,15 @@ nav ul {
 }
 nav ul li a {
   color: #333;
-nav li {
-  margin: 0;
-}
-nav a {
-  display: block;
-  padding: 14px 28px;
-  color: #ffe;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05rem;
-  font-weight: 500;
-  transition: background 0.15s, color 0.15s;
-}
-nav a:hover, nav a:focus {
-  background: #3c4752;
-  color: #f90;
 }
 
 /* Stopka */
 .site-footer {
   width: 1400px;
   max-width: 95vw;
-/* News single post */
-.news-single {
-  padding: 32px 28px 24px 28px;
-  max-width: 650px;
   margin: 0 auto;
   background: #fff;
   border-radius: 0 0 18px 18px;
@@ -174,21 +125,37 @@ nav a:hover, nav a:focus {
 .footer-contact {
   font-size: 1rem;
   color: #222;
-.news-single h1 {
-  font-size: 2.2em;
-  margin-bottom: 16px;
-  color: #1c2227;
-  border-left: 5px solid #f90;
-  padding-left: 12px;
-  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .footer-map {
   min-width: 300px;
   flex: 1;
-.news-single-img {
-  width: 100%;
   max-width: 500px;
+}
+
+/* Najnowsze aktualności w stopce */
+.footer-latest-news {
+  min-width: 220px;
+}
+.footer-latest-news h4 {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #333;
+}
+.footer-latest-news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-latest-news li {
+  margin-bottom: 5px;
+}
+.footer-latest-news a {
+  color: #37d67a;
+  text-decoration: none;
+}
+.footer-latest-news a:hover {
+  text-decoration: underline;
 }
 
 /* Kontakt: dane i formularz obok siebie */
@@ -217,7 +184,6 @@ nav a:hover, nav a:focus {
 .contact-form {
   background: #f8f8f8;
   padding: 32px 28px;
-  margin: 18px 0 24px 0;
   border-radius: 12px;
   box-shadow: 0 3px 18px rgba(0,0,0,0.10);
   max-width: 480px;
@@ -241,26 +207,16 @@ nav a:hover, nav a:focus {
   font-family: 'Roboto', Arial, sans-serif;
   background: #fff;
   transition: border-color 0.2s;
-  box-shadow: 0 2px 12px rgba(80,80,80,0.12);
-  display: block;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: #37d67a;
-.news-single-content {
-  font-size: 1.13em;
-  line-height: 1.7;
-  margin-bottom: 32px;
 }
 
 .contact-form button[type="submit"] {
   background: #37d67a;
-.news-back-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #f90;
   color: #fff;
   border: none;
   padding: 12px 0;
@@ -270,16 +226,10 @@ nav a:hover, nav a:focus {
   cursor: pointer;
   transition: background 0.2s;
   margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  transition: background 0.18s;
 }
 
 .contact-form button[type="submit"]:hover {
   background: #21a64c;
-.news-back-btn:hover {
-  background: #e67600;
 }
 
 /* Aktualności - lista */
@@ -315,8 +265,6 @@ nav a:hover, nav a:focus {
 .news-info {
   flex: 1;
   padding: 24px 28px;
-/* Stopka */
-.site-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -334,19 +282,12 @@ nav a:hover, nav a:focus {
 .news-more-btn {
   align-self: flex-start;
   background: #37d67a;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background: #222b33;
   color: #fff;
   padding: 8px 18px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.2s;
-  padding: 30px 24px 18px 24px;
-  font-size: 1em;
-  margin-top: 38px;
-  border-radius: 0 0 10px 10px;
 }
 .news-more-btn:hover {
   background: #21a64c;
@@ -364,9 +305,6 @@ nav a:hover, nav a:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-.footer-contact {
-  min-width: 220px;
-  margin-bottom: 16px;
 }
 .news-single h1 {
   font-size: 2.1rem;
@@ -374,8 +312,6 @@ nav a:hover, nav a:focus {
   color: #1a1a1a;
   font-weight: 700;
   text-align: center;
-.footer-contact strong {
-  font-size: 1.08em;
 }
 .news-single-img {
   width: 100%;
@@ -384,18 +320,11 @@ nav a:hover, nav a:focus {
   border-radius: 12px;
   margin: 24px auto 24px auto;
   box-shadow: 0 3px 16px rgba(0,0,0,0.07);
-.footer-map {
-  min-width: 220px;
-  width: 310px;
-  max-width: 100%;
 }
 .news-single-content {
   font-size: 1.12rem;
   color: #333;
   margin-bottom: 32px;
-.footer-map iframe {
-  border-radius: 8px;
-  border: none;
   width: 100%;
 }
 .news-back-btn {
@@ -411,7 +340,6 @@ nav a:hover, nav a:focus {
 }
 .news-back-btn:hover {
   background: #d6d6d6;
-  height: 160px;
 }
 
 /* Responsywność */
@@ -469,22 +397,105 @@ nav a:hover, nav a:focus {
     max-width: 100%;
     margin: 14px auto 18px auto;
   }
-@media (max-width: 900px) {
-  .site-container { max-width: 100%; margin: 0;}
-  .news-single { padding: 20px 8vw; }
-  .site-footer { flex-direction: column; align-items: stretch; }
-  .footer-map, .footer-contact { width: 100%; min-width: unset; }
+}
+/* MODAL NEWS */
+.news-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.55);
+}
+.news-modal-content {
+  background: #fff;
+  max-width: 700px;
+  margin: 60px auto;
+  border-radius: 10px;
+  padding: 36px 28px 28px 28px;
+  position: relative;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.18);
+  font-family: 'Roboto', Arial, sans-serif;
+  animation: modal-in 0.30s;
+}
+@keyframes modal-in {
+  from { transform: translateY(-40px) scale(0.97); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.news-modal-close {
+  position: absolute;
+  top: 16px; right: 22px;
+  font-size: 2em;
+  color: #888;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.news-modal-close:hover { color: #f90; }
+@media (max-width: 740px) {
+  .news-modal-content { max-width: 98vw; padding: 18px 4vw; }
 }
 
-@media (max-width: 600px) {
-  .site-topbar { flex-direction: column; align-items: flex-start; padding: 12px 8px; }
-  .topbar-company { flex-direction: column; align-items: flex-start; }
-  .company-logo { margin: 0 0 8px 0; }
-  nav ul { flex-direction: column; }
-  nav a { padding: 12px 12px; }
-  .news-single { padding: 16px 3vw; }
-  .site-footer { padding: 18px 8px; }
+.news-gallery {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
 }
 
-/* Drobne dodatki */
-a { transition: color 0.15s; }
+/* GALERIA NEWS - zdjęcia z efektem kursora */
+.news-gallery-img {
+  max-width: 180px;
+  max-height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s;
+  position: relative;
+  z-index: 1;
+}
+.news-gallery-img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+/* LIGHTBOX for news-gallery */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  cursor: zoom-out;
+  animation: fade-in 0.2s;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.lightbox-image {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.32);
+  background: #fff;
+  object-fit: contain;
+}
+.lightbox-overlay:after {
+  content: "✕";
+  position: absolute;
+  top: 32px;
+  right: 54px;
+  font-size: 2.4em;
+  color: #fff;
+  pointer-events: none;
+  text-shadow: 0 3px 16px #000;
+}
+@media (max-width:600px){
+  .lightbox-image { max-width: 99vw; max-height: 78vh; }
+  .lightbox-overlay:after { top: 14px; right: 14px; font-size: 2em; }
+}
