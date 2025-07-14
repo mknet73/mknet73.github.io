@@ -245,6 +245,7 @@ nav ul li a {
   background: #f8f8f8;
   border-radius: 14px;
   box-shadow: 0 2px 14px rgba(0,0,0,0.10);
+  margin-bottom: 28px;
   overflow: hidden;
 }
 .news-thumb {
