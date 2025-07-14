@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Nowy samochód w ofercie"
