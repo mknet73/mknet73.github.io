@@ -10,6 +10,8 @@ nav:
     url: /about/
   - title: "Aktualności"
     url: /aktualnosci/
+  - title: "Dokumenty"
+    url: /dokumenty/
   - title: "Kontakt"
     url: /contact/
 
