@@ -23,13 +23,7 @@
           <a href="https://youtube.com/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <nav>
-        <ul>
-          {% for item in site.nav %}
-            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </nav>
+      {% include menu.html %}
       <main>
         {{ content }}
       </main>
