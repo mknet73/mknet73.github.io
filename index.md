@@ -5,7 +5,7 @@ title: Strona główna
 
 <h1 class="news-main-title">Aktualności</h1>
 <p class="news-main-lead">
-  Regularnie dzielimy się z naszą społecznością aktualnymi informacjami o tym, co się dzieje. Oto najnowsze informacje.
+  Regularnie dzielimy się aktualnymi informacjami o tym, co się dzieje. Oto najnowsze informacje.
 </p>
 <div class="news-cards-grid">
   {% assign posts = site.posts | slice: 0, 6 %}
