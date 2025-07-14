@@ -103,6 +103,59 @@ nav ul li a {
   font-size: 1.05rem;
 }
 
+.homepage-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0 0 0;
+  justify-items: center;
+}
+
+.homepage-news-tile {
+  width: 240px;
+  height: 170px;
+  border: 3px solid #e00;
+  border-radius: 8px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 20px #0001;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-news-tile:hover {
+  border-color: #37d67a;
+  box-shadow: 0 6px 24px #0002;
+}
+
+.homepage-news-tile img,
+.homepage-news-placeholder {
+  width: 90%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 12px;
+  background: #eee;
+}
+
+.homepage-news-title {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  font-size: 1.06em;
+  padding: 0 12px;
+}
+
+.homepage-news-placeholder {
+  display: block;
+}
+
 /* Stopka */
 .site-footer {
   width: 1400px;
@@ -133,30 +186,7 @@ nav ul li a {
   max-width: 500px;
 }
 
-/* Najnowsze aktualności w stopce */
-.footer-latest-news {
-  min-width: 220px;
-}
-.footer-latest-news h4 {
-  margin-bottom: 8px;
-  font-size: 1.1em;
-  color: #333;
-}
-.footer-latest-news ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-latest-news li {
-  margin-bottom: 5px;
-}
-.footer-latest-news a {
-  color: #37d67a;
-  text-decoration: none;
-}
-.footer-latest-news a:hover {
-  text-decoration: underline;
-}
+
 
 /* Kontakt: dane i formularz obok siebie */
 .contact-form-container {
