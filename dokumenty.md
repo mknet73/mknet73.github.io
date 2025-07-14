@@ -7,8 +7,9 @@ permalink: /dokumenty/
 <h1>Dokumenty do pobrania</h1>
 
 <ul class="documents-list">
-  <h2>Przykład 1</h2>
+  
   <li>
+    <h4>Przykład 1</h4>
     <a href="/assets/documents/ProLite TE7513A-B1AG-pl_pl.pdf" download>Pobierz: Przyklad 1 (PDF)</a>
   </li>
   <li>
