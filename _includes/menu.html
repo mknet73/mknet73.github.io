@@ -3,7 +3,7 @@
     {% for item in site.nav %}
       {% if item.submenu %}
         <li class="has-dropdown">
-          <a href="#" class="dropdown-toggle" tabindex="0">{{ item.title }} <span class="caret">▼</span></a>
+          <a href="#" class="dropdown-toggle" tabindex="0">{{ item.title }} ▼</a>
           <ul class="dropdown-menu">
             {% for subitem in item.submenu %}
               <li><a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
