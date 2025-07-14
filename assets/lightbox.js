@@ -1,7 +1,6 @@
-// Lightbox dla zdjęć w newsach (.news-gallery-img), także w dynamicznych modalach
+// Lightbox dla zdjęć w newsach (.news-gallery-img), działa także na obrazach w modalach newsów
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Delegacja zdarzenia na całego document
   document.body.addEventListener('click', function(e) {
     const img = e.target.closest('.news-gallery-img');
     if (img) {
@@ -10,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function showLightbox(src, alt) {
-    // Tworzymy overlay
+    // Tworzymy overlay lightboxa
     const overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
 
@@ -23,14 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(overlay);
 
     // Zamknięcie po kliknięciu overlay lub ESC
-    overlay.addEventListener('click', function() {
+    function closeLightbox() {
       overlay.remove();
-    });
-    document.addEventListener('keydown', function escListener(e) {
+      document.removeEventListener('keydown', escListener);
+    }
+    overlay.addEventListener('click', closeLightbox);
+
+    function escListener(e) {
       if (e.key === "Escape") {
-        overlay.remove();
-        document.removeEventListener('keydown', escListener);
+        closeLightbox();
       }
-    });
+    }
+    document.addEventListener('keydown', escListener);
   }
 });
