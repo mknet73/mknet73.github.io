@@ -11,7 +11,7 @@ permalink: /dokumenty/
     <a href="/assets/documents/ProLite TE7513A-B1AG-pl_pl.pdf" download>Pobierz: Przyklad 1 (PDF)</a>
   </li>
   <li>
-    <a href="/assets/documents/regulamin.pdf" download>Pobierz: Regulamin (PDF)</a>
+    <a href="/assets/documents/certyfikat (6).pdf" download>Pobierz: Regulamin (PDF)</a>
   </li>
   <li>
     <a href="/assets/documents/cennik.docx" download>Pobierz: Cennik (Word)</a>
