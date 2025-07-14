@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.appendChild(image);
     document.body.appendChild(overlay);
 
-    // Zamknięcie po kliknięciu overlay lub ESC
     function closeLightbox() {
       overlay.remove();
       document.removeEventListener('keydown', escListener);
