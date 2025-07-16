@@ -19,7 +19,7 @@ nav:
   - title: "Kontakt"
     url: /contact/
 
-markdown: markdown
+markdown: kramdown
 permalink: /posts/:title/
 plugins:
   - jekyll-feed
