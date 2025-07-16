@@ -893,10 +893,11 @@ nav ul.main-nav li .dropdown-menu a:hover {
   background: #fff;
   color: #555;
   text-align: center;
-  font-size: 1.02em;
-  padding: 12px 0 15px 0;
+  font-size: 1.08em;
+  font-weight: bold;
+  padding: 12px 0 18px 0;
   border-radius: 0 0 18px 18px;
   box-shadow: 0 2px 12px #0001;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   font-style: italic;
 }
