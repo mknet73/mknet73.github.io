@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: mknet73/mknet73.github.io
+  name: git-gateway
   branch: main
 
 media_folder: "assets/images/uploads"
