@@ -16,6 +16,8 @@ permalink: /dokumenty/
         <span class="document-date">
           {% if doc.last_modified_at %}
             {{ doc.last_modified_at | date: "%Y-%m-%d" }}
+          {% else %}
+            Brak daty
           {% endif %}
         </span>
       </div>
@@ -23,3 +25,5 @@ permalink: /dokumenty/
     </li>
   {% endfor %}
 </ul>
+
+<p>Wszystkie dokumenty są dostępne do pobrania. Jeśli potrzebujesz innego pliku, skontaktuj się z nami.</p>
