@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: mknet73/mknet73.github.io
   branch: main
+  client_id: Ov23lie2y44KX6f4Vjo7
+  client_secret: 0df0bcbd2fa25efa6098926e05b992af0587e0d0
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
